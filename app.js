@@ -1,9 +1,12 @@
+
+
 const express = require('express')
 const app = express()
 
-const hostname = '127.0.0.1'   // set constants
+const hostname = '0.0.0.0'   // set constants
 const port = 3002
 
+app.post
 app.get('/', function (req, res) {
   res.send('Welcome home!')
 })
@@ -14,6 +17,11 @@ app.get('/hello', (req, res) => {
 
 app.get('/big',  (req, res) =>{
   res.send('<h1>Hello World!</h1>')
+})
+
+app.get('/Harsha',  (req, res) =>{
+  console.log('GET request')
+  res.send('<h2>Hello! I am Harsha</h2>')
 })
 
 app.get('/greeting/:id',  (req, res) =>{
